@@ -3,7 +3,7 @@
 
 body{
     background: #000;
-    overflow: hidden;
+    /* overflow: hidden; */
     font-family: 'Poppins', sans-serif;
 }
 
@@ -129,7 +129,7 @@ a{
 
 @media only screen and (max-width: 768px){
     .youtube-btn, .tiktok-btn, .whatsapp-btn, .wordpress-btn, .cloud-btn{
-        width: 350px;
+        width: 334px;
         padding-block: 5px;
     }
 
