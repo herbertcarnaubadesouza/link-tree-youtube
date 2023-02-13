@@ -1,9 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
 body{
     background: #000;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
 }
+
+
+.container{
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
 
 .rei-image{
     color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .rei-image img{
@@ -15,8 +35,40 @@ body{
 }
 
 .buttons-container{
+    margin-bottom: 30px;
+    margin-top: 10px;
     color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    gap: 18px;
 }
+
+
+.youtube-btn, .tiktok-btn, .cloud-btn,.whatsapp-btn, .wordpress-btn{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: #aa00e9;
+    border-radius: 25px;
+    height: 45px;
+    width: 432px;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0px 0px 18px 1px rgb(34 228 143 / 65%);
+}
+
+.youtube-btn:hover,.cloud-btn:hover ,.tiktok-btn:hover, .whatsapp-btn:hover, .wordpress-btn:hover{
+    animation-name: wobble-skew;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    transform-origin: top left, bottom right, top right, bottom left;
+}
+
 
 .buttons-container img {
     width: 24px;
@@ -24,8 +76,64 @@ body{
     object-fit: cover;
 }
 
+.social-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
 .social-container img{
     width: 24px;
     height: 24px;
     object-fit: cover;
+    cursor: pointer;
+}
+
+.tiktok-btn img{
+    margin-left: -20px;
+}
+
+.whatsapp-btn img{
+    margin-left: -5px;
+}
+
+.youtube-btn img{
+    margin-left: -10px;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+@keyframes wobble-skew{
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    75% {
+        transform: translate3d(-1%, 0, 0) skewX(12deg);
+    }
+
+    50% {
+        transform: translate3d(1%, 0, 0) skewX(-12deg);
+    }
+
+    25% {
+        transform: translate3d(-1%, 0, 0) skewX(12deg);
+    }
+}
+
+
+
+@media only screen and (max-width: 768px){
+    .youtube-btn, .tiktok-btn, .whatsapp-btn, .wordpress-btn, .cloud-btn{
+        width: 350px;
+        padding-block: 5px;
+    }
+
+    .wordpress-btn{
+        text-align: center;
+    }
 }
