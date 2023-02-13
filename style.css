@@ -84,6 +84,7 @@ body{
     justify-content: center;
     align-items: center;
     gap: 15px;
+    padding-bottom: 100px;
 }
 
 .social-container img{
